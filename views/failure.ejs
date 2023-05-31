@@ -1,0 +1,21 @@
+<%- include("partials/header"); -%>
+
+        <div class="container fc">
+            <div class="ordercard">
+                <div class="p-5 text-center bg-body-tertiary rounded-3">
+                    <div class="card-body text-center">
+                        <div class="main">
+                            <h1>Transaction Failed!!</h1>
+                            <h6>There was an error while processing the transaction. Kindly check if you have entered
+                                the correct username and ID of both the sender and receiver.</h6>
+                        </div>
+                        <div class="text-center pb-2">
+                            <a href="/sendMoney" class="btn btn-primary">
+                                <i class="fa fa-check mr-2"></i>Transact Again
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include("partials/footer"); -%>

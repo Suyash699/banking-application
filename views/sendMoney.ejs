@@ -1,0 +1,49 @@
+<%- include("partials/header"); -%>
+
+
+  <div class="sM">
+    <form class="transact" id="form" action="sendMoney" form method="POST">
+      <div class="form-row">
+        <div class="col">
+          <input type="text" class="form-control" name="senderName" placeholder="Sender's Name" id="sname" required>
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Recipient's Name" name="recipientName" id="rname"
+            required>
+        </div>
+
+      </div>
+      <div class="form-row">
+        <div class="col">
+          <input type="number" class="form-control" placeholder="Sender's Account Number" name="senderAccountNum"
+            id="sacc" required>
+        </div>
+        <div class="col">
+          <input type="number" class="form-control" placeholder="Recipients Account Number" name="recipientAccountNum"
+            id="racc" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col">
+          <input type="number" class="form-control" placeholder="Amount" id="amt" name="amount" required>
+        </div>
+
+      </div>
+      <div class="form-row pl-2 tx">
+        <div class="col pl-2">
+          <textarea type="text" class="form-control pl-2 " placeholder="Message" name="msg" rows="3"
+            id="msg"></textarea>
+        </div>
+      </div>
+      <div class="container mybtn">
+        <a href="/success"><button class="btn btn-primary text-dark" type="submit" value="Transaction" name="Transact"
+            class="form control">Send Money</button></a>
+
+      </div>
+
+    </form>
+
+  </div>
+
+
+  <%- include("partials/footer"); -%>

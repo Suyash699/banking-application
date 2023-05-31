@@ -1,0 +1,51 @@
+<%- include("partials/header"); -%>
+
+            <center style="margin-top:5rem;">
+                <h2>Welcome to the Customer's Page</h2>
+                <h4>This is our current userbase.</h4>
+            </center>
+
+            <div class="container ">
+                <div class="col-lg-12">
+                    <br><br>
+                    <h1 class="text-warning text-center"> </h1>
+                    <br>
+                    <table id="tabledata" class=" table table-hover table-bordered cs">
+
+                        <tr class="bg-light text-black text-center">
+
+                            <th>Customer name </th>
+                            <th>Account Number </th>
+                            <th>Email-id</th>
+                            <th>Current Balance</th>
+                        </tr>
+                        <% allcustomers.forEach(function(customer){%>
+                            <tr class="bg-light text-black text-center">
+                                <td>
+                                    <%=customer.name%>
+                                </td>
+                                <td>
+                                    <%=customer.accountNo%>
+                                </td>
+                                <td>
+                                    <%=customer.email%>
+                                </td>
+                                <td>
+                                    <%=customer.balance%>
+                                </td>
+                            </tr>
+
+                            <% }) %>
+                    </table>
+                </div>
+            </div>
+            <br>
+
+            <div class="text-center pb-2">
+                <a href="/sendMoney" class="btn btn-primary">
+                    <i class="fa fa-check mr-2"></i>Make a Payment
+                </a>
+            </div>
+            <br>
+
+            <%- include("partials/footer"); -%>
